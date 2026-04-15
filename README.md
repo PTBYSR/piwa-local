@@ -52,8 +52,12 @@ npm run build
 Set up your `.env` file (copy from `.env.example`):
 ```text
 WORK_DIR=./work
-PHONE_NUMBER=your_whatsapp_number
-OWNER_NUMBER=your_owner_jid
+# PHONE_NUMBER: The number the AI Agent will use to respond to you.
+# Format: Country code + number, NO plus sign (e.g., 1234567890)
+PHONE_NUMBER=agent_whatsapp_number
+# OWNER_NUMBER: Your personal WhatsApp number. Only this number can command the agent.
+# Format: Country code + number, NO plus sign.
+OWNER_NUMBER=your_personal_number
 ```
 
 Start the bridge:
