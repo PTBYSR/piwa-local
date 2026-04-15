@@ -47,13 +47,19 @@ function createQwenToolFixStream(model: any, context: any, options: any) {
             // Attempt to parse as tool call using regex extraction
             try {
               let jsonStr = buffer.trim();
-              
+
+              // Strip <think>...</think> blocks before parsing
+              jsonStr = jsonStr.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
+
+              // Strip markdown code fences if present
+              jsonStr = jsonStr.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+
               // Extract anything that looks like {"name": "...", "arguments": {...}}
-              const match = jsonStr.match(/\{[\s\S]*?"name"[\s\S]*?"arguments"[\s\S]*\}/);
+              const match = jsonStr.match(/\{[\s\S]*?"name"[\s\S]*?"arguments"[\s\S]*?\}(?=\s*$|\s*```)/);
               if (match) {
                 jsonStr = match[0];
               }
-              
+
               const parsed = JSON.parse(jsonStr);
               
               if (parsed && typeof parsed.name === 'string' && typeof parsed.arguments === 'object') {
@@ -67,7 +73,11 @@ function createQwenToolFixStream(model: any, context: any, options: any) {
                 };
                 
                 // Emit the conversational text BEFORE the tool call if there is any
-                const textBefore = buffer.substring(0, match ? match.index : 0).replace(/```(json)?\s*$/i, '').replace(/<tool_call>\s*$/i, '').trim();
+                let textBefore = buffer.substring(0, match ? match.index : 0)
+                  .replace(/<think>[\s\S]*?<\/think>/gi, '')  // strip thinking blocks
+                  .replace(/```(json)?\s*$/i, '')
+                  .replace(/</think>\s*$/i, '')
+                  .trim();
                 if (textBefore.length > 0) {
                   // We need to keep this as a text block
                   event.partial.content[contentIndex] = { type: "text", text: textBefore } as any;

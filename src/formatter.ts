@@ -3,6 +3,14 @@ export function format(raw: string): string {
   // This happens when Ollama (which lacks native tool calling) hallucinate tools as markdown JSON
   let text = raw.replace(/```json\s*\{\s*"name":\s*"[^"]+",\s*"arguments":\s*\{[\s\S]*?\}\s*\}\s*```/g, '');
 
+  // Strip raw JSON tool calls WITHOUT code fences (e.g. {"name":"bash","arguments":{"command":"..."}})
+  // Local models like qwen2.5-coder often output these directly as text
+  // Match: { "name": "...", "arguments": { ... } } with optional surrounding whitespace
+  text = text.replace(/\{\s*"name"\s*:\s*"[^"]+"\s*,\s*"arguments"\s*:\s*\{[\s\S]*?\}\s*\}/g, '');
+
+  // Strip <think>...</think> blocks that local models emit
+  text = text.replace(/<think>[\s\S]*?<\/think>/gi, '');
+
   // 1. Strip markdown headers
   text = text.replace(/^#+\s+(.*)$/gm, '$1');
 
