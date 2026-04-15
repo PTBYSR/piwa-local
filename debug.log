@@ -1,0 +1,652 @@
+[2026-04-15T18:34:17.011Z] SYSTEM: Startup initialized
+[2026-04-15T18:34:17.153Z] Test log
+[2026-04-15T18:41:48.060Z] SYSTEM: Startup initialized
+[2026-04-15T18:41:54.817Z] SYSTEM: Setting up messages.upsert listener
+[2026-04-15T19:24:51.811Z] SYSTEM: Startup initialized
+[2026-04-15T19:25:28.789Z] SYSTEM: Setting up messages.upsert listener
+[2026-04-15T19:25:30.658Z] === RAW messages.upsert TRIGGERED. Count: 2 ===
+[2026-04-15T19:25:30.658Z] Raw msg keys: messageStubParameters,labels,userReceipt,reactions,pollUpdates,eventResponses,statusMentions,messageAddOns,statusMentionSources,supportAiCitations,key,message,messageTimestamp,status. message keys: extendedTextMessage
+[2026-04-15T19:25:30.659Z] === Received message from 2347088436930@s.whatsapp.net ===
+[2026-04-15T19:25:30.659Z] Text: "🤖 *PIWA AI System Online*
+  
+Model: `qwen2.5-coder:7b`
+Status: Ready for commands.
+
+Available commands:
+/new - Start a new session
+/model <name> - Switch Ollama model
+/compact - Compact context
+/session - Show session info
+/help - Show this message"
+[2026-04-15T19:25:30.660Z] fromMe: true, ownerNumber: 2347088436930, matchesOwner: true
+[2026-04-15T19:25:30.660Z] SKIPPED: fromMe=true
+[2026-04-15T19:25:30.661Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:30.661Z] SKIPPED: text is empty
+[2026-04-15T19:25:31.057Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:31.057Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:31.057Z] SKIPPED: text is empty
+[2026-04-15T19:25:36.364Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:36.365Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:36.365Z] SKIPPED: text is empty
+[2026-04-15T19:25:39.991Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:39.992Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:39.992Z] SKIPPED: text is empty
+[2026-04-15T19:25:40.129Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:40.129Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:40.130Z] SKIPPED: text is empty
+[2026-04-15T19:25:40.144Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:40.145Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:40.145Z] SKIPPED: text is empty
+[2026-04-15T19:25:58.702Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:25:58.703Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:25:58.703Z] SKIPPED: text is empty
+[2026-04-15T19:26:00.210Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:00.211Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T19:26:00.211Z] SKIPPED: msg.message is undefined
+[2026-04-15T19:26:04.466Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:04.467Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage,messageContextInfo
+[2026-04-15T19:26:04.467Z] SKIPPED: text is empty
+[2026-04-15T19:26:05.574Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:05.575Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,protocolMessage,messageContextInfo
+[2026-04-15T19:26:05.575Z] SKIPPED: text is empty
+[2026-04-15T19:26:14.845Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:14.846Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:26:14.846Z] SKIPPED: text is empty
+[2026-04-15T19:26:19.199Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:19.200Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:26:19.200Z] SKIPPED: text is empty
+[2026-04-15T19:26:33.096Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:33.096Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:26:33.097Z] SKIPPED: text is empty
+[2026-04-15T19:26:47.996Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:26:47.997Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:26:47.998Z] SKIPPED: text is empty
+[2026-04-15T19:27:05.198Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:05.200Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:27:05.200Z] SKIPPED: text is empty
+[2026-04-15T19:27:07.256Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:07.257Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T19:27:07.257Z] SKIPPED: text is empty
+[2026-04-15T19:27:17.756Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:17.756Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T19:27:17.757Z] SKIPPED: text is empty
+[2026-04-15T19:27:30.785Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:30.785Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:27:30.785Z] SKIPPED: text is empty
+[2026-04-15T19:27:37.241Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:37.242Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation,messageContextInfo
+[2026-04-15T19:27:37.242Z] === Received message from 2347088436930@s.whatsapp.net ===
+[2026-04-15T19:27:37.242Z] Text: "hi"
+[2026-04-15T19:27:37.242Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: true
+[2026-04-15T19:27:37.243Z] PASSED filters — forwarding to bridge...
+[2026-04-15T19:27:37.245Z] [BRIDGE] handleMessage called. jid=2347088436930@s.whatsapp.net, text="hi"
+[2026-04-15T19:27:38.088Z] [BRIDGE] Sent Thinking indicator, calling session.prompt()...
+[2026-04-15T19:27:38.092Z] [BRIDGE EVENT] type=agent_start
+[2026-04-15T19:27:38.094Z] [BRIDGE EVENT] type=turn_start
+[2026-04-15T19:27:38.094Z] [BRIDGE EVENT] type=message_start
+[2026-04-15T19:27:38.098Z] [BRIDGE EVENT] type=message_end
+[2026-04-15T19:27:38.868Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:38.869Z] Raw msg keys: messageStubParameters,labels,userReceipt,reactions,pollUpdates,eventResponses,statusMentions,messageAddOns,statusMentionSources,supportAiCitations,key,message,messageTimestamp,status. message keys: extendedTextMessage
+[2026-04-15T19:27:38.869Z] === Received message from 2347088436930@s.whatsapp.net ===
+[2026-04-15T19:27:38.870Z] Text: "⏳ *Thinking...*"
+[2026-04-15T19:27:38.870Z] fromMe: true, ownerNumber: 2347088436930, matchesOwner: true
+[2026-04-15T19:27:38.871Z] SKIPPED: fromMe=true
+[2026-04-15T19:27:47.037Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:27:47.038Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:27:47.038Z] SKIPPED: text is empty
+[2026-04-15T19:29:52.684Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:29:52.685Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:29:52.686Z] SKIPPED: text is empty
+[2026-04-15T19:30:02.006Z] [BRIDGE EVENT] type=message_start
+[2026-04-15T19:30:02.009Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:02.010Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:02.252Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:02.545Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:02.887Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:03.152Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:03.512Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:03.868Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:04.327Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:04.636Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:04.881Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:05.212Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:05.560Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:05.885Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:06.298Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:06.633Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:06.952Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:07.285Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:07.680Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:07.941Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:08.302Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:08.646Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:08.969Z] [BRIDGE EVENT] type=message_update
+[2026-04-15T19:30:08.969Z] [BRIDGE EVENT] type=message_end
+[2026-04-15T19:30:08.970Z] [BRIDGE EVENT] type=turn_end
+[2026-04-15T19:30:08.982Z] [BRIDGE EVENT] type=agent_end
+[2026-04-15T19:30:08.985Z] [BRIDGE] session.prompt() resolved.
+[2026-04-15T19:30:10.531Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:30:10.532Z] Raw msg keys: messageStubParameters,labels,userReceipt,reactions,pollUpdates,eventResponses,statusMentions,messageAddOns,statusMentionSources,supportAiCitations,key,message,messageTimestamp,status. message keys: extendedTextMessage
+[2026-04-15T19:30:10.532Z] === Received message from 2347088436930@s.whatsapp.net ===
+[2026-04-15T19:30:10.533Z] Text: "{"name":"bash","arguments":{"command":"echo 'Hello, how can I assist you today?'"}}"
+[2026-04-15T19:30:10.534Z] fromMe: true, ownerNumber: 2347088436930, matchesOwner: true
+[2026-04-15T19:30:10.535Z] SKIPPED: fromMe=true
+[2026-04-15T19:31:43.235Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:31:43.236Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,reactionMessage
+[2026-04-15T19:31:43.236Z] SKIPPED: text is empty
+[2026-04-15T19:34:14.574Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:34:14.574Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:34:14.575Z] === Received message from status@broadcast ===
+[2026-04-15T19:34:14.575Z] Text: "Arder Guler ⚽⚽"
+[2026-04-15T19:34:14.575Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:34:14.576Z] SKIPPED: not from owner
+[2026-04-15T19:34:53.282Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:34:53.282Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage
+[2026-04-15T19:34:53.283Z] SKIPPED: text is empty
+[2026-04-15T19:36:31.037Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:36:31.038Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:36:31.038Z] SKIPPED: text is empty
+[2026-04-15T19:36:39.140Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:36:39.140Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:36:39.141Z] SKIPPED: text is empty
+[2026-04-15T19:37:46.413Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:37:46.413Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T19:37:46.414Z] SKIPPED: text is empty
+[2026-04-15T19:38:49.969Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:38:49.970Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T19:38:49.970Z] SKIPPED: text is empty
+[2026-04-15T19:40:42.943Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:40:42.943Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:40:42.944Z] === Received message from status@broadcast ===
+[2026-04-15T19:40:42.944Z] Text: "Ekiti North"
+[2026-04-15T19:40:42.945Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:40:42.945Z] SKIPPED: not from owner
+[2026-04-15T19:41:15.460Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:41:15.464Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message,verifiedBizName. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T19:41:15.465Z] SKIPPED: text is empty
+[2026-04-15T19:41:23.496Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:41:23.499Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:41:23.499Z] SKIPPED: text is empty
+[2026-04-15T19:42:44.771Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:42:44.772Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:42:44.773Z] SKIPPED: text is empty
+[2026-04-15T19:46:19.102Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:46:19.103Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T19:46:19.103Z] === Received message from status@broadcast ===
+[2026-04-15T19:46:19.104Z] Text: "For here🤍?
+Blanco Boyz"
+[2026-04-15T19:46:19.104Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:46:19.104Z] SKIPPED: not from owner
+[2026-04-15T19:47:09.308Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:47:09.309Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T19:47:09.310Z] SKIPPED: text is empty
+[2026-04-15T19:47:46.481Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:47:46.482Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message,verifiedBizName. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:47:46.482Z] === Received message from status@broadcast ===
+[2026-04-15T19:47:46.483Z] Text: "Omo madrid Bayern"
+[2026-04-15T19:47:46.483Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:47:46.483Z] SKIPPED: not from owner
+[2026-04-15T19:47:58.614Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:47:58.615Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:47:58.615Z] === Received message from status@broadcast ===
+[2026-04-15T19:47:58.616Z] Text: "Barca fans hate watching rn 😂"
+[2026-04-15T19:47:58.616Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:47:58.616Z] SKIPPED: not from owner
+[2026-04-15T19:49:43.932Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:49:43.933Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message,verifiedBizName. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:49:43.933Z] SKIPPED: text is empty
+[2026-04-15T19:51:35.579Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:51:35.583Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T19:51:35.583Z] SKIPPED: text is empty
+[2026-04-15T19:53:51.965Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:53:51.966Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T19:53:51.967Z] SKIPPED: text is empty
+[2026-04-15T19:54:22.750Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:54:22.751Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T19:54:22.752Z] SKIPPED: text is empty
+[2026-04-15T19:56:56.321Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:56:56.322Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:56:56.323Z] SKIPPED: text is empty
+[2026-04-15T19:57:00.901Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:57:00.917Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T19:57:00.918Z] SKIPPED: msg.message is undefined
+[2026-04-15T19:57:12.401Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:57:12.402Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T19:57:12.404Z] SKIPPED: text is empty
+[2026-04-15T19:57:14.634Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:57:14.635Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage,messageContextInfo
+[2026-04-15T19:57:14.636Z] SKIPPED: text is empty
+[2026-04-15T19:57:26.016Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:57:26.016Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message,verifiedBizName. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:57:26.016Z] === Received message from status@broadcast ===
+[2026-04-15T19:57:26.017Z] Text: "Abeg make Bayern allow my boys😂"
+[2026-04-15T19:57:26.017Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:57:26.017Z] SKIPPED: not from owner
+[2026-04-15T19:59:23.528Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:59:23.528Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T19:59:23.529Z] SKIPPED: text is empty
+[2026-04-15T19:59:29.713Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:59:29.714Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T19:59:29.714Z] SKIPPED: text is empty
+[2026-04-15T19:59:33.058Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:59:33.058Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T19:59:33.058Z] === Received message from status@broadcast ===
+[2026-04-15T19:59:33.059Z] Text: "Omo thragg na demon 
+Wetin i.just watch bro jeses"
+[2026-04-15T19:59:33.059Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T19:59:33.060Z] SKIPPED: not from owner
+[2026-04-15T19:59:59.619Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T19:59:59.620Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T19:59:59.620Z] SKIPPED: text is empty
+[2026-04-15T20:00:13.655Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:00:13.655Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T20:00:13.656Z] SKIPPED: text is empty
+[2026-04-15T20:00:24.731Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:00:24.732Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:00:24.732Z] SKIPPED: text is empty
+[2026-04-15T20:00:52.387Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:00:52.387Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:00:52.388Z] SKIPPED: text is empty
+[2026-04-15T20:01:26.571Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:01:26.571Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:01:26.572Z] SKIPPED: text is empty
+[2026-04-15T20:01:31.451Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:01:31.452Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:01:31.452Z] SKIPPED: text is empty
+[2026-04-15T20:01:37.889Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:01:37.889Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:01:37.889Z] SKIPPED: text is empty
+[2026-04-15T20:01:44.399Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:01:44.399Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:01:44.400Z] SKIPPED: text is empty
+[2026-04-15T20:01:48.967Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:01:48.968Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:01:48.969Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:01:48.969Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:12- 9:13pm - Choose Heads 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:01:48.970Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:01:48.970Z] SKIPPED: not from owner
+[2026-04-15T20:02:28.756Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:02:28.757Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:02:28.758Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:02:28.759Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:12- 9:13pm - Choose Heads 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:02:28.759Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:02:28.760Z] SKIPPED: not from owner
+[2026-04-15T20:02:29.643Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:02:29.643Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T20:02:29.644Z] SKIPPED: msg.message is undefined
+[2026-04-15T20:02:40.662Z] === RAW messages.upsert TRIGGERED. Count: 2 ===
+[2026-04-15T20:02:40.663Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T20:02:40.663Z] SKIPPED: text is empty
+[2026-04-15T20:02:40.664Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:02:40.664Z] SKIPPED: text is empty
+[2026-04-15T20:02:40.839Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:02:40.840Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,imageMessage,messageContextInfo
+[2026-04-15T20:02:40.840Z] SKIPPED: text is empty
+[2026-04-15T20:03:15.031Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:03:15.037Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:03:15.041Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:03:15.042Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:12- 9:13pm - Choose Heads 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:03:15.042Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:03:15.055Z] SKIPPED: not from owner
+[2026-04-15T20:03:52.871Z] === RAW messages.upsert TRIGGERED. Count: 4 ===
+[2026-04-15T20:03:52.872Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T20:03:52.872Z] SKIPPED: text is empty
+[2026-04-15T20:03:52.873Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:03:52.873Z] SKIPPED: text is empty
+[2026-04-15T20:03:52.873Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:03:52.874Z] SKIPPED: text is empty
+[2026-04-15T20:03:52.874Z] Raw msg keys: messageStubParameters,labels,userReceipt,reactions,pollUpdates,eventResponses,statusMentions,messageAddOns,statusMentionSources,supportAiCitations,key,message,messageTimestamp,participant,messageSecret,reportingTokenInfo,isMentionedInStatus. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:03:52.875Z] SKIPPED: text is empty
+[2026-04-15T20:04:07.719Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:04:07.723Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:04:07.723Z] SKIPPED: text is empty
+[2026-04-15T20:04:08.205Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:04:08.206Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T20:04:08.207Z] === Received message from status@broadcast ===
+[2026-04-15T20:04:08.207Z] Text: "Vitality Mehn, if you can master the digital virality economics.
+
+You sure can make a lot of money."
+[2026-04-15T20:04:08.211Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:04:08.211Z] SKIPPED: not from owner
+[2026-04-15T20:15:19.942Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:15:19.944Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage
+[2026-04-15T20:15:19.944Z] SKIPPED: text is empty
+[2026-04-15T20:15:24.866Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:15:24.866Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T20:15:24.867Z] SKIPPED: text is empty
+[2026-04-15T20:17:56.857Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:17:56.857Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:17:56.858Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:17:56.859Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:28- 9:29pm - Choose Tails 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:17:56.859Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:17:56.860Z] SKIPPED: not from owner
+[2026-04-15T20:19:20.252Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:19:20.253Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:19:20.253Z] SKIPPED: text is empty
+[2026-04-15T20:19:21.617Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:19:21.618Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:19:21.618Z] SKIPPED: text is empty
+[2026-04-15T20:23:42.989Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:23:42.990Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:23:42.990Z] SKIPPED: text is empty
+[2026-04-15T20:24:35.789Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:24:35.790Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:24:35.790Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:24:35.790Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:28- 9:29pm - Choose Tails 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:24:35.791Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:24:35.792Z] SKIPPED: not from owner
+[2026-04-15T20:25:19.569Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:25:19.569Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:25:19.570Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:25:19.570Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:28- 9:29pm - Choose Tails 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:25:19.570Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:25:19.571Z] SKIPPED: not from owner
+[2026-04-15T20:25:19.575Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:25:19.576Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T20:25:19.576Z] SKIPPED: msg.message is undefined
+[2026-04-15T20:26:01.595Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:26:01.596Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:26:01.596Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:26:01.596Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:28- 9:29pm - Choose Tails 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:26:01.597Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:26:01.597Z] SKIPPED: not from owner
+[2026-04-15T20:26:46.890Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:26:46.890Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T20:26:46.891Z] === Received message from 120363335906794703@g.us ===
+[2026-04-15T20:26:46.891Z] Text: "You guys don't miss this"
+[2026-04-15T20:26:46.891Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:26:46.892Z] SKIPPED: not from owner
+[2026-04-15T20:27:11.281Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:27:11.282Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T20:27:11.282Z] SKIPPED: text is empty
+[2026-04-15T20:27:18.050Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:27:18.050Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation,messageContextInfo
+[2026-04-15T20:27:18.051Z] === Received message from 120363335906794703@g.us ===
+[2026-04-15T20:27:18.051Z] Text: "Location : vault social house victoria island"
+[2026-04-15T20:27:18.051Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:27:18.052Z] SKIPPED: not from owner
+[2026-04-15T20:27:44.577Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:27:44.577Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation,messageContextInfo
+[2026-04-15T20:27:44.577Z] === Received message from 120363335906794703@g.us ===
+[2026-04-15T20:27:44.578Z] Text: "Ticket 🎫 is almost out"
+[2026-04-15T20:27:44.578Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:27:44.578Z] SKIPPED: not from owner
+[2026-04-15T20:28:01.981Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:28:01.982Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:28:01.982Z] SKIPPED: text is empty
+[2026-04-15T20:31:49.033Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:31:49.033Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage,messageContextInfo
+[2026-04-15T20:31:49.034Z] SKIPPED: text is empty
+[2026-04-15T20:32:07.358Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:32:07.358Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T20:32:07.359Z] SKIPPED: text is empty
+[2026-04-15T20:32:42.709Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:32:42.710Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:32:42.710Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:32:42.711Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:28- 9:29pm - Choose Tails 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:32:42.711Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:32:42.712Z] SKIPPED: not from owner
+[2026-04-15T20:32:54.238Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:32:54.239Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T20:32:54.239Z] SKIPPED: text is empty
+[2026-04-15T20:33:34.759Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:33:34.759Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage
+[2026-04-15T20:33:34.760Z] SKIPPED: text is empty
+[2026-04-15T20:35:06.839Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:35:06.839Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:35:06.840Z] === Received message from 120363408679105778@newsletter ===
+[2026-04-15T20:35:06.840Z] Text: "Heads or Tails Signals on 1XBET
+
+Play by 9:45- 9:46pm - Choose Heads 
+
+Increase your stake for bigger wins.
+Send winning screenshots to 
+t.me/Ozage"
+[2026-04-15T20:35:06.840Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:35:06.841Z] SKIPPED: not from owner
+[2026-04-15T20:35:14.537Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:35:14.537Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:35:14.538Z] SKIPPED: text is empty
+[2026-04-15T20:47:31.121Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:47:31.122Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T20:47:31.122Z] SKIPPED: msg.message is undefined
+[2026-04-15T20:49:46.779Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:49:46.780Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,imageMessage
+[2026-04-15T20:49:46.780Z] SKIPPED: text is empty
+[2026-04-15T20:51:05.781Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:51:05.782Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage
+[2026-04-15T20:51:05.783Z] SKIPPED: text is empty
+[2026-04-15T20:51:46.376Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:51:46.377Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:51:46.377Z] SKIPPED: text is empty
+[2026-04-15T20:52:37.635Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:52:37.636Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:52:37.637Z] SKIPPED: text is empty
+[2026-04-15T20:52:54.990Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:52:54.990Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:52:54.991Z] SKIPPED: text is empty
+[2026-04-15T20:53:26.512Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:53:26.513Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message,verifiedBizName. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T20:53:26.513Z] === Received message from status@broadcast ===
+[2026-04-15T20:53:26.513Z] Text: "How do Arsenal fans even watch their matches?"
+[2026-04-15T20:53:26.514Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:53:26.514Z] SKIPPED: not from owner
+[2026-04-15T20:54:00.012Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:54:00.014Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: conversation
+[2026-04-15T20:54:00.015Z] === Received message from 120363364471298182@newsletter ===
+[2026-04-15T20:54:00.017Z] Text: "An opening for a brand strategist and digital marketer on the platform.
+
+Compensation (200k - 500k)
+
+Contact: +234 903 072 2701"
+[2026-04-15T20:54:00.018Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:54:00.019Z] SKIPPED: not from owner
+[2026-04-15T20:54:49.159Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:54:49.159Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:54:49.160Z] === Received message from status@broadcast ===
+[2026-04-15T20:54:49.160Z] Text: "Make Madrid  and  their fans come join us for here  Na Chelsea ndi hook up dey front.
+
+Ramotonda una 
+😹😹😹"
+[2026-04-15T20:54:49.160Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:54:49.161Z] SKIPPED: not from owner
+[2026-04-15T20:55:27.421Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:55:27.422Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T20:55:27.423Z] SKIPPED: text is empty
+[2026-04-15T20:55:43.944Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:55:43.945Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:55:43.946Z] SKIPPED: text is empty
+[2026-04-15T20:55:44.732Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:55:44.735Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:55:44.737Z] SKIPPED: text is empty
+[2026-04-15T20:56:12.002Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:56:12.004Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:56:12.006Z] SKIPPED: text is empty
+[2026-04-15T20:56:28.660Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:56:28.661Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T20:56:28.662Z] === Received message from status@broadcast ===
+[2026-04-15T20:56:28.663Z] Text: "😂😂😂"
+[2026-04-15T20:56:28.663Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:56:28.664Z] SKIPPED: not from owner
+[2026-04-15T20:56:42.130Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:56:42.131Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,videoMessage
+[2026-04-15T20:56:42.132Z] SKIPPED: text is empty
+[2026-04-15T20:56:55.801Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:56:55.803Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T20:56:55.804Z] SKIPPED: text is empty
+[2026-04-15T20:57:02.069Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:57:02.070Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:57:02.073Z] === Received message from status@broadcast ===
+[2026-04-15T20:57:02.074Z] Text: "Oliseh
+Omg"
+[2026-04-15T20:57:02.076Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:57:02.077Z] SKIPPED: not from owner
+[2026-04-15T20:57:06.199Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:57:06.202Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:57:06.205Z] SKIPPED: text is empty
+[2026-04-15T20:57:09.377Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:57:09.378Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:57:09.379Z] === Received message from status@broadcast ===
+[2026-04-15T20:57:09.380Z] Text: "🤣🤣🤣🤣🤣🤣🤣🤣"
+[2026-04-15T20:57:09.380Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:57:09.381Z] SKIPPED: not from owner
+[2026-04-15T20:58:18.931Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:58:18.932Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage,messageContextInfo
+[2026-04-15T20:58:18.934Z] SKIPPED: text is empty
+[2026-04-15T20:58:29.684Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:58:29.686Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:58:29.688Z] === Received message from status@broadcast ===
+[2026-04-15T20:58:29.690Z] Text: "Ah, we really missed out on Olise to buy Neto.
+
+Well, Bayern are the toughest team in this year's CL.
+
+This was just another routine win for them."
+[2026-04-15T20:58:29.692Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:58:29.694Z] SKIPPED: not from owner
+[2026-04-15T20:58:31.424Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:58:31.425Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage,messageContextInfo
+[2026-04-15T20:58:31.426Z] SKIPPED: text is empty
+[2026-04-15T20:59:01.640Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:01.643Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,protocolMessage
+[2026-04-15T20:59:01.646Z] SKIPPED: text is empty
+[2026-04-15T20:59:02.959Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:02.959Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:59:02.960Z] SKIPPED: text is empty
+[2026-04-15T20:59:04.345Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:04.347Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:59:04.349Z] SKIPPED: text is empty
+[2026-04-15T20:59:05.668Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:05.672Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:59:05.678Z] SKIPPED: text is empty
+[2026-04-15T20:59:06.864Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:06.867Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: protocolMessage
+[2026-04-15T20:59:06.870Z] SKIPPED: text is empty
+[2026-04-15T20:59:23.344Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:23.346Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:59:23.350Z] === Received message from status@broadcast ===
+[2026-04-15T20:59:23.353Z] Text: "Na olise suppose be next president of Nigeria"
+[2026-04-15T20:59:23.355Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:59:23.358Z] SKIPPED: not from owner
+[2026-04-15T20:59:26.355Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:26.357Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,messageStubType,messageStubParameters. message keys: 
+[2026-04-15T20:59:26.358Z] SKIPPED: msg.message is undefined
+[2026-04-15T20:59:32.365Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:32.368Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,status,message. message keys: protocolMessage
+[2026-04-15T20:59:32.370Z] SKIPPED: text is empty
+[2026-04-15T20:59:32.872Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:32.873Z] Raw msg keys: messageStubParameters,labels,userReceipt,reactions,pollUpdates,eventResponses,statusMentions,messageAddOns,statusMentionSources,supportAiCitations,key,message,messageTimestamp,participant,messageSecret,reportingTokenInfo,isMentionedInStatus. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:59:32.874Z] SKIPPED: text is empty
+[2026-04-15T20:59:34.611Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:34.613Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T20:59:34.616Z] SKIPPED: text is empty
+[2026-04-15T20:59:40.210Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T20:59:40.212Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T20:59:40.214Z] === Received message from status@broadcast ===
+[2026-04-15T20:59:40.216Z] Text: "Just wow life can be crazy sometimes 
+Funny how sometimes i remember mbappe left PSG because of UCL trophy knocked out twice since joining real Madrid ..
+Where it gets more interesting is that Madrid is going trophyless this season ...
+
+If PSG wins the UCL and France perhaps does well in the world cup ..
+
+Dembele second Ballon d or
+Loading...."
+[2026-04-15T20:59:40.219Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T20:59:40.220Z] SKIPPED: not from owner
+[2026-04-15T21:00:17.708Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:00:17.709Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T21:00:17.710Z] === Received message from status@broadcast ===
+[2026-04-15T21:00:17.711Z] Text: "My belle 🤣🤣🤣🤣"
+[2026-04-15T21:00:17.711Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T21:00:17.712Z] SKIPPED: not from owner
+[2026-04-15T21:00:23.626Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:00:23.628Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T21:00:23.629Z] === Received message from status@broadcast ===
+[2026-04-15T21:00:23.631Z] Text: "Vini Jr no play anything for this match sha"
+[2026-04-15T21:00:23.633Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T21:00:23.634Z] SKIPPED: not from owner
+[2026-04-15T21:00:24.191Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:00:24.192Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: extendedTextMessage,messageContextInfo
+[2026-04-15T21:00:24.202Z] === Received message from status@broadcast ===
+[2026-04-15T21:00:24.204Z] Text: "You people will rate Olise by force. 
+
+You're lucky he's just a quiet guy.
+
+That guy is equally as good as Yamal."
+[2026-04-15T21:00:24.208Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T21:00:24.209Z] SKIPPED: not from owner
+[2026-04-15T21:00:25.835Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:00:25.841Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T21:00:25.842Z] SKIPPED: text is empty
+[2026-04-15T21:00:45.215Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:00:45.217Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T21:00:45.218Z] === Received message from status@broadcast ===
+[2026-04-15T21:00:45.219Z] Text: "Thank you Bayern"
+[2026-04-15T21:00:45.221Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T21:00:45.222Z] SKIPPED: not from owner
+[2026-04-15T21:02:12.276Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:02:12.280Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: senderKeyDistributionMessage,messageContextInfo,extendedTextMessage
+[2026-04-15T21:02:12.282Z] === Received message from status@broadcast ===
+[2026-04-15T21:02:12.284Z] Text: "Real Madrid nd champions league entertainment 
+>>>"
+[2026-04-15T21:02:12.285Z] fromMe: false, ownerNumber: 2347088436930, matchesOwner: false
+[2026-04-15T21:02:12.287Z] SKIPPED: not from owner
+[2026-04-15T21:03:08.795Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:03:08.797Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage
+[2026-04-15T21:03:08.799Z] SKIPPED: text is empty
+[2026-04-15T21:03:17.297Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:03:17.298Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T21:03:17.299Z] SKIPPED: text is empty
+[2026-04-15T21:03:22.681Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:03:22.683Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: videoMessage,messageContextInfo
+[2026-04-15T21:03:22.685Z] SKIPPED: text is empty
+[2026-04-15T21:04:16.781Z] === RAW messages.upsert TRIGGERED. Count: 1 ===
+[2026-04-15T21:04:16.783Z] Raw msg keys: key,messageTimestamp,pushName,broadcast,message. message keys: imageMessage,messageContextInfo
+[2026-04-15T21:04:16.784Z] SKIPPED: text is empty

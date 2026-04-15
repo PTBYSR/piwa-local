@@ -1,4 +1,7 @@
-# 🤖 PIWA — Personal Intelligence WhatsApp Agent
+# 🤖 PIWA — Pi WhatsApp Agent
+
+> ⚠️ **Note: This project is currently in early Alpha / Work-In-Progress.** 
+> The core WhatsApp bridge and framework integration work, but there is currently a known bug with how local models output their responses. Active development is ongoing, and PRs are highly welcome!
 
 **PIWA** is a local-first, open-source AI coding agent bridged directly to your WhatsApp. It allows you to control your computer, perform web searches, and execute complex coding tasks via a secure WhatsApp conversation, all running entirely on your own hardware using **Ollama**.
 
@@ -101,7 +104,7 @@ Once connected, you can text your bot from your whitelisted phone number.
 
 ## 📜 Acknowledgements
 
-PIWA is built on top of the powerful **PI (Personal Intelligence)** agent framework developed by [Mario Zechner](https://github.com/badlogic). 
+PIWA is built on top of the powerful **PI** agent framework developed by [Mario Zechner](https://github.com/badlogic). 
 
 Special thanks to the following core libraries:
 *   [**pi-mono**](https://github.com/badlogic/pi-mono) — The core monorepo for the PI ecosystem.

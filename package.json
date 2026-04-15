@@ -1,0 +1,23 @@
+{
+  "name": "pi-whatsapp-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.2.0",
+    "@mariozechner/pi-agent-core": "latest",
+    "@mariozechner/pi-ai": "latest",
+    "@mariozechner/pi-coding-agent": "latest",
+    "@whiskeysockets/baileys": "^6.7.9",
+    "dotenv": "latest",
+    "pino": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
