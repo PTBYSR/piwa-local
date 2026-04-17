@@ -10,12 +10,34 @@ import {
   getAgentDir,
 } from "@mariozechner/pi-coding-agent";
 import type { AgentSessionRuntime } from "@mariozechner/pi-coding-agent";
-import { type Model } from "@mariozechner/pi-ai";
+import { type Model, registerApiProvider, getApiProvider } from "@mariozechner/pi-ai";
 import { webSearchTool } from "./web-search.js";
 import { createOllamaNativeStream } from "./ollama-provider.js";
 
 const OLLAMA_PROVIDER_ID = "ollama-native";
 const OLLAMA_API_ID = "ollama-chat";
+
+// Register the api handler directly on pi-ai's global registry. This must be
+// called *before every prompt*: pi-coding-agent calls resetApiProviders()
+// during session/extension init (and on any modelRegistry.refresh()), which
+// wipes non-builtin handlers. Without this, streamSimple() throws
+// "No API provider registered for api: ollama-chat" and the turn ends empty.
+export function ensureOllamaApiRegistered() {
+  registerApiProvider(
+    {
+      api: OLLAMA_API_ID as any,
+      stream: createOllamaNativeStream as any,
+      streamSimple: createOllamaNativeStream as any,
+    },
+    "piwa-ollama-native",
+  );
+}
+
+ensureOllamaApiRegistered();
+console.log(
+  `[AGENT] registered pi-ai api handler '${OLLAMA_API_ID}' — present:`,
+  !!getApiProvider(OLLAMA_API_ID as any),
+);
 
 export async function createRuntime(modelName: string): Promise<AgentSessionRuntime> {
   const cwd = process.env.WORK_DIR || process.cwd();

@@ -1,9 +1,10 @@
 import { WASocket } from '@whiskeysockets/baileys';
 import { AgentSessionRuntime, AgentSession } from '@mariozechner/pi-coding-agent';
-import { getModel } from '@mariozechner/pi-ai';
+import { getModel, getApiProvider } from '@mariozechner/pi-ai';
 import { sendMessage, sendPresence } from './whatsapp.js';
 import { format } from './formatter.js';
 import { dbg } from './index.js';
+import { ensureOllamaApiRegistered } from './agent.js';
 
 export function createBridge(runtime: AgentSessionRuntime) {
   let unsubscribe: (() => void) | undefined;
@@ -28,6 +29,28 @@ export function createBridge(runtime: AgentSessionRuntime) {
     
     unsubscribe = activeSession.subscribe(async (event) => {
       dbg(`[BRIDGE EVENT] type=${event.type}`);
+
+      // Surface the silent error path. pi-agent-core's runWithLifecycle
+      // catches exceptions from runAgentLoop, stuffs them into a synthetic
+      // agent_end with stopReason: "error" and errorMessage set, then moves
+      // on. Without logging this we see "empty 5ms turn" with no clue why.
+      if (event.type === "agent_end") {
+        const anyEvt = event as any;
+        const msgs = anyEvt.messages ?? [];
+        for (const m of msgs) {
+          if (m?.stopReason && m.stopReason !== "stop" && m.stopReason !== "toolUse") {
+            dbg(
+              `[BRIDGE EVENT] agent_end stopReason=${m.stopReason} errorMessage=${m.errorMessage ?? "(none)"}`,
+            );
+            if (currentJid && m.errorMessage) {
+              try {
+                await sendMessage(currentJid, `⚠️ ${m.errorMessage}`);
+              } catch {}
+            }
+          }
+        }
+      }
+
       try {
         if (event.type === "message_update") {
           // Only capture actual text meant for the user
@@ -138,11 +161,18 @@ export function createBridge(runtime: AgentSessionRuntime) {
       // Normal message
       try {
         await sendPresence(jid, 'composing');
-        
+
         // Instant visual feedback for the user
         await sendMessage(jid, `⏳ *Thinking...*`);
-        dbg('[BRIDGE] Sent Thinking indicator, calling session.prompt()...');
-        
+
+        // Re-assert our api handler on pi-ai's global registry. pi-coding-agent
+        // wipes non-builtin handlers via resetApiProviders() during session
+        // init / refresh, so we need this before every prompt.
+        ensureOllamaApiRegistered();
+        dbg(
+          `[BRIDGE] ensured ollama-chat handler, present=${!!getApiProvider("ollama-chat" as any)}; calling session.prompt()...`,
+        );
+
         // Pass prompt to the agent framework.
         await runtime.session.prompt(text);
         dbg('[BRIDGE] session.prompt() resolved.');
