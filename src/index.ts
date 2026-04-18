@@ -18,6 +18,8 @@ import pino from "pino";
 import * as fs from "fs";
 import * as path from "path";
 
+import { ask } from "./agent.js";
+
 // -----------------------------------------------------------------------------
 // Config
 // -----------------------------------------------------------------------------
@@ -225,6 +227,29 @@ async function start(): Promise<void> {
       try {
         if (msg.key) await sock.readMessages([msg.key]);
       } catch {}
+
+      // Keep WhatsApp's "typing…" indicator visible for the whole run.
+      // Presence auto-expires after ~15s, so we re-send every 10s.
+      await sock.sendPresenceUpdate("composing", jid).catch(() => {});
+      const typingTimer = setInterval(() => {
+        sock.sendPresenceUpdate("composing", jid).catch(() => {});
+      }, 10_000);
+
+      const sendChunk = (chunk: string) =>
+        sock.sendMessage(jid, { text: chunk }).then(() => undefined);
+
+      try {
+        const final = await ask(text, sendChunk);
+        if (final) await sock.sendMessage(jid, { text: final });
+      } catch (err) {
+        console.error("[Agent] failed:", err);
+        await sock
+          .sendMessage(jid, { text: "⚠️ agent error, check server logs" })
+          .catch(() => {});
+      } finally {
+        clearInterval(typingTimer);
+        await sock.sendPresenceUpdate("paused", jid).catch(() => {});
+      }
     }
   });
 }
