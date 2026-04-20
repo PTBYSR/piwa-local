@@ -9,7 +9,7 @@
 
 ---
 
-PIWA lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the Pi agent framework. 
+PIWA lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the native Pi framework. 
 
 Adapt your agent to your commute. No laptop required—just text your agent architectural questions, ask it to read logs, or have it write code on your host machine while you are away from your desk.
 
@@ -19,44 +19,36 @@ Adapt your agent to your commute. No laptop required—just text your agent arch
 * **WhatsApp Accounts:** 
   * A secondary phone number to act as the "Agent".
   * Your personal phone number to act as the "Owner".
-* **API Key:** A Google Gemini API key (defaults to `gemini-2.5-flash`).
+* **API Key:** A Google Gemini, Anthropic, or OpenAI API key.
 
 ## 🚀 Quick Start
+
+PIWA is designed for **Zero-Friction Setup**. You do not need to configure any `.env` files.
 
 ```bash
 git clone https://github.com/PTBYSR/piwa-local.git
 cd piwa-local
 npm install
-```
-
-Create and configure your `.env` file:
-```text
-WORK_DIR=./work
-# AGENT_NUMBER: The bot's number (Country code + number, NO plus sign)
-AGENT_NUMBER=1234567890   
-# OWNER_NUMBER: YOUR number (Only this number can command the agent)
-OWNER_NUMBER=0987654321   
-# GEMINI API KEY: Your Google AI Studio key
-GEMINI_API_KEY=your_google_gemini_api_key
-```
-
-Start the bridge:
-```bash
 npm start
 ```
 
-## 🛠️ WhatsApp Linking
+On your very first run, an interactive terminal wizard will guide you:
+1. It will ask for the Bot's WhatsApp number.
+2. It will ask for your personal WhatsApp number (so nobody else can command the bot).
+3. It will generate an **8-character Pairing Code** in your terminal.
+    * Open WhatsApp on your **Agent phone**.
+    * Go to **Settings > Linked Devices > Link a Device > Link with phone number instead**.
+    * Enter the code from your terminal.
 
-PIWA uses a seamless pairing code (no QR code scanning required):
+Once linked, your configuration is saved locally to `piwa.config.json` and `.piwa-auth/`, so you never have to pair again!
 
-1. Run `npm start`.
-2. Wait a few seconds for an **8-character Pairing Code** to appear in your terminal.
-3. Open WhatsApp on your **Agent phone**.
-4. Go to **Settings > Linked Devices > Link a Device**.
-5. Select **Link with phone number instead**.
-6. Enter the code from your terminal.
+## 🔑 Authentication & API Keys
 
-Once linked, the `work/auth/` folder will securely store your session keys so you don't have to re-pair on restarts.
+PIWA relies entirely on the native `pi-coding-agent` for authentication. 
+
+* If you have ever used the `pi` CLI on your computer before, **PIWA will instantly find your existing API keys** (`~/.pi/agent/auth.json`) and work out-of-the-box.
+* If you don't have an API key configured yet, the native Pi TUI will automatically prompt you for one in the terminal the first time you try to send a message.
+* You can also type `/login` in the terminal to securely connect enterprise OAuth providers like Google Cloud Vertex AI or GitHub Copilot.
 
 ## ⚙️ How It Works
 

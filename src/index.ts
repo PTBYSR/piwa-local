@@ -10,47 +10,24 @@
  * You can also type directly in the TUI — WhatsApp is just a remote input.
  */
 
-import "dotenv/config";
-
 import * as fs from "fs";
 import * as path from "path";
 import { getModel } from "@mariozechner/pi-ai";
 import {
   AuthStorage,
-  ModelRegistry,
   SessionManager,
-  SettingsManager,
   InteractiveMode,
   createAgentSessionRuntime,
   createAgentSessionFromServices,
   createAgentSessionServices,
   getAgentDir,
   initTheme,
-  type AgentSessionRuntime,
   type CreateAgentSessionRuntimeFactory,
 } from "@mariozechner/pi-coding-agent";
 
 import { createWhatsAppBridge, type WhatsAppBridge } from "./whatsapp.js";
 import { handleWhatsAppMessage } from "./agent.js";
-
-// -----------------------------------------------------------------------------
-// Config
-// -----------------------------------------------------------------------------
-
-const WORK_DIR = process.env.WORK_DIR || process.cwd();
-const AGENT_NUMBER = (process.env.AGENT_NUMBER || "").replace(/[^0-9]/g, "");
-const OWNER_NUMBER = (process.env.OWNER_NUMBER || "").replace(/[^0-9]/g, "");
-
-if (!AGENT_NUMBER) {
-  console.error("⚠️  AGENT_NUMBER env var is required (digits only, no +).");
-  process.exit(1);
-}
-if (!OWNER_NUMBER) {
-  console.error("⚠️  OWNER_NUMBER env var is required (digits only, no +).");
-  process.exit(1);
-}
-
-fs.mkdirSync(WORK_DIR, { recursive: true });
+import { loadOrPromptConfig, deleteConfig } from "./setup.js";
 
 // -----------------------------------------------------------------------------
 // Bootstrap
@@ -79,10 +56,26 @@ async function main() {
       }
     });
 
-    const { settingsManager, modelRegistry, resourceLoader } = services;
+    const { settingsManager, modelRegistry } = services;
 
-    // Resolve model
-    const model = getModel("google", "gemini-2.5-flash");
+    // 1. Try to use the developer's default model from ~/.pi/agent/settings.json
+    const savedProvider = settingsManager.getDefaultProvider();
+    const savedModelId = settingsManager.getDefaultModel();
+    
+    let model;
+    if (savedProvider && savedModelId) {
+      model = modelRegistry.find(savedProvider, savedModelId);
+    }
+    
+    // 2. If no default is set, pick the very first model the user has an API key for
+    if (!model) {
+      const allModels = modelRegistry.getAll();
+      model = allModels.length > 0 ? allModels[0] : getModel("google", "gemini-2.5-flash");
+    }
+
+    if (!model) {
+      throw new Error("No models available. Please set an API key using the pi CLI.");
+    }
 
     const created = await createAgentSessionFromServices({
       services,
@@ -115,67 +108,95 @@ async function main() {
   // ---- Initialize theme ----
   initTheme(settingsManager.getTheme(), true);
 
-  // ---- Start the native pi TUI ----
+  // ---- Start the native pi TUI (don't render yet) ----
   const interactiveMode = new InteractiveMode(runtime, {
     verbose: false,
   });
 
-  // ---- Start WhatsApp bridge (non-blocking) ----
+  // ---- The Retry Loop for WhatsApp Connection ----
   let waBridge: WhatsAppBridge | null = null;
-
-  // Processing lock — one WhatsApp message at a time
   let waProcessing: Promise<unknown> = Promise.resolve();
 
-  createWhatsAppBridge({
-    workDir: WORK_DIR,
-    agentNumber: AGENT_NUMBER,
-    ownerNumber: OWNER_NUMBER,
-    onMessage: (text, jid, pushName, bridge) => {
-      // Serialize WhatsApp message handling
-      waProcessing = waProcessing.then(async () => {
-        bridge.startTyping(jid);
+  while (!waBridge) {
+    const config = await loadOrPromptConfig();
 
-        const sendChunk = async (chunk: string) => {
-          await bridge.sendMessage(jid, chunk);
-        };
+    console.log("⏳ Initializing WhatsApp connection...");
 
-        try {
-          const reply = await handleWhatsAppMessage(
-            runtime.session,
-            text,
-            sendChunk,
-          );
-          if (reply) {
-            await bridge.sendMessage(jid, reply);
-          }
-        } catch (err) {
-          // Send simple error to WhatsApp
-          await bridge
-            .sendMessage(jid, "⚠️ agent error, check terminal")
-            .catch(() => {});
-        } finally {
-          bridge.stopTyping(jid);
-        }
-      }).catch(err => {
-        // Prevent the waProcessing queue from permanently failing if an unexpected error occurs
+    try {
+      waBridge = await createWhatsAppBridge({
+        authDir: path.join(cwd, ".piwa-auth"),
+        agentNumber: config.agentNumber,
+        ownerNumber: config.ownerNumber,
+        onMessage: (text, jid, pushName, bridge) => {
+          if (!bridge) return;
+          
+          waProcessing = waProcessing.then(async () => {
+            bridge.startTyping(jid);
+
+            const sendChunk = async (chunk: string) => {
+              await bridge.sendMessage(jid, chunk);
+            };
+
+            try {
+              const reply = await handleWhatsAppMessage(
+                runtime.session,
+                text,
+                sendChunk,
+              );
+              
+              if (reply) {
+                await bridge.sendMessage(jid, reply);
+              }
+            } catch (err: any) {
+              const errorMsg = err?.message?.toLowerCase() || "";
+
+              if (errorMsg.includes("api key")) {
+                const authHelpMsg = 
+                  "⚠️ *API Key Missing!*\n\n" +
+                  "The WhatsApp bridge is working perfectly, but the AI engine is not authenticated on your computer.\n\n" +
+                  "*To fix this, go to your computer's terminal and do ONE of the following:*\n\n" +
+                  "1️⃣ Type `/login` in the terminal to authorize via your web browser.\n" +
+                  "2️⃣ Type a message (e.g., 'hello') directly into the terminal, and it will prompt you to paste your key.\n" +
+                  "3️⃣ Stop the bot and set an environment variable before restarting:\n" +
+                  "`export GEMINI_API_KEY=your_key_here`\n\n" +
+                  "Once you do that, message me here again!";
+                  
+                await bridge.sendMessage(jid, authHelpMsg).catch(() => {});
+              } else {
+                await bridge
+                  .sendMessage(jid, "⚠️ agent error, check terminal")
+                  .catch(() => {});
+              }
+            } finally {
+              bridge.stopTyping(jid);
+            }
+          }).catch(err => {});
+        },
       });
-    },
-  })
-    .then((bridge) => {
-      waBridge = bridge;
-    })
-    .catch((err) => {
-      console.error("[PIWA] WhatsApp bridge failed to start:", err);
-      console.error("[PIWA] Terminal TUI is still running without WhatsApp.");
-    });
+    } catch (err: any) {
+      const errMsg = err?.message || "";
+      if (errMsg === "BAD_AGENT_NUMBER" || errMsg === "BAD_OWNER_NUMBER") {
+        console.log("\n⚠️ WhatsApp rejected the numbers. Let's try again.\n");
+        deleteConfig(); // Delete the bad config file so it prompts again next loop
+      } else {
+        console.log("\n⚠️ WhatsApp connection dropped (Timeout). Retrying with the same numbers...\n");
+        // We DO NOT delete the config file here!
+      }
+      
+      // Short delay before the loop restarts
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
+  }
 
   // ---- Graceful shutdown ----
   process.on("SIGINT", () => {
+    console.log("\n\n🛑 Setup cancelled by user. Exiting PIWA...");
     waBridge?.close();
-    // InteractiveMode handles its own SIGINT cleanup
+    process.exit(0);
   });
 
-  // ---- Run the TUI (blocks until exit) ----
+  // ---- Take over the screen with the TUI ----
+  console.log("🚀 Booting up Pi Terminal UI...");
   await interactiveMode.run();
 }
 

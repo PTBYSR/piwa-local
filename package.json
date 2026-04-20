@@ -7,10 +7,12 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@clack/prompts": "^1.2.0",
     "@mariozechner/pi-coding-agent": "^0.67.68",
     "@whiskeysockets/baileys": "^6.7.9",
     "dotenv": "latest",
     "node-cache": "^5.1.2",
+    "picocolors": "^1.1.1",
     "pino": "^10.3.1"
   },
   "devDependencies": {

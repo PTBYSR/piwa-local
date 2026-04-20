@@ -72,6 +72,7 @@ async function runTurn(
   let buffer = "";
   let lastFlush = Date.now();
   let flushing: Promise<void> | null = null;
+  let sentChunks = false;
 
   const flush = async (): Promise<void> => {
     const pending = buffer.trim();
@@ -79,6 +80,7 @@ async function runTurn(
     buffer = "";
     lastFlush = Date.now();
     try {
+      sentChunks = true;
       await sendChunk(pending);
     } catch (err) {
       console.error("[WA] chunk send failed:", err);
@@ -99,14 +101,13 @@ async function runTurn(
   });
 
   try {
-    // Use sendUserMessage so InteractiveMode also sees the user message
-    // in the TUI via its own event subscription.
-    if (session.isStreaming) {
-      // Agent is busy — queue as follow-up
-      await session.followUp(text);
-    } else {
-      await session.prompt(text);
+    // Wait until the agent is idle if it's currently busy (e.g. from the TUI or previous msg)
+    while (session.isStreaming) {
+      await new Promise((resolve) => setTimeout(resolve, 500));
     }
+    
+    // Now send the prompt and await its full completion
+    await session.prompt(text);
   } finally {
     unsubscribe();
   }
@@ -115,6 +116,12 @@ async function runTurn(
   if (flushing) await flushing;
   await flush();
 
-  // Return empty string since we already sent the message via sendChunk
+  // If the model doesn't support streaming (no text_delta emitted),
+  // sentChunks will be false. In that case, return the final complete message.
+  if (!sentChunks) {
+    return session.getLastAssistantText()?.trim() ?? "";
+  }
+
+  // Otherwise, return empty string since we already sent the message via sendChunk
   return "";
 }

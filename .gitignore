@@ -4,3 +4,7 @@
 .env
 *.log
 .DS_Store
+# PIWA Specific
+.piwa-auth/
+piwa.config.json
+piwa-baileys.log
