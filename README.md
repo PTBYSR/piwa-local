@@ -9,9 +9,9 @@
 
 ---
 
-PIWA lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the native Pi framework. 
+PIWA lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the <a href="https://github.com/badlogic/pi-mono">pi coding agent</a>. 
 
-Adapt your agent to your commute. No laptop required—just text your agent architectural questions, ask it to read logs, or have it write code on your host machine while you are away from your desk.
+Text your Whatsapp coding agent architectural questions, ask it to read logs, or have it write code on your host machine while you are away from your desk.
 
 ## 📋 Requirements
 
@@ -19,7 +19,7 @@ Adapt your agent to your commute. No laptop required—just text your agent arch
 * **WhatsApp Accounts:** 
   * A secondary phone number to act as the "Agent".
   * Your personal phone number to act as the "Owner".
-* **API Key:** A Google Gemini, Anthropic, or OpenAI API key.
+* **(OPTIONAL) API Key:** A Google Gemini, Anthropic, or OpenAI API key.
 
 ## 🚀 Quick Start
 
@@ -48,7 +48,7 @@ PIWA relies entirely on the native `pi-coding-agent` for authentication.
 
 * If you have ever used the `pi` CLI on your computer before, **PIWA will instantly find your existing API keys** (`~/.pi/agent/auth.json`) and work out-of-the-box.
 * If you don't have an API key configured yet, the native Pi TUI will automatically prompt you for one in the terminal the first time you try to send a message.
-* You can also type `/login` in the terminal to securely connect enterprise OAuth providers like Google Cloud Vertex AI or GitHub Copilot.
+* You can also type `/login` in the terminal to securely connect enterprise OAuth providers like Google Cloud Vertex AI, Antigravity or GitHub Copilot.
 
 ## ⚙️ How It Works
 
