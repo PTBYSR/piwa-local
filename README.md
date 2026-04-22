@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="piwa-hero.png" alt="Piwa" width="200"/>
+  <img src="piwa-hero.png" alt="Piwa" width="100"/>
 </p>
 
 # Piwa
