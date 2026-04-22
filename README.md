@@ -2,7 +2,7 @@
   <img src="piwa-hero.png" alt="PIWA Hero" width="200" />
 </div>
 
-<h3 align="center">Get up and running with large language models, safely and easily.</h3>
+<h3 align="center">Turn your old laptop into a public AI server</h3>
 
 <p align="center">
   <b><a href="#">Download for macOS</a></b>
