@@ -8,3 +8,4 @@
 .piwa-auth/
 piwa.config.json
 piwa-baileys.log
+.claude
