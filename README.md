@@ -2,7 +2,7 @@
   <img src="piwa-hero.png" alt="PIWA Hero" width="200" />
 </div>
 
-<h3 align="center">Turn your old laptop into a public AI server</h3>
+<h3 align="center">Interact with your machine with a coding agent via Whatsapp </h3>
 
 <p align="center">
   <b><a href="#">Download for macOS</a></b>
@@ -14,7 +14,7 @@
 
 ---
 
-PIWA lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the <a href="https://github.com/badlogic/pi-mono">pi coding agent</a>. 
+Piwa lets you interact with an autonomous AI coding agent directly via WhatsApp. It acts as a lightweight messaging layer on top of the <a href="https://github.com/badlogic/pi-mono">pi coding agent</a>. 
 
 Text your Whatsapp coding agent architectural questions, ask it to read logs, or have it write code on your host machine while you are away from your desk.
 
