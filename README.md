@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="piwa-hero.png" alt="PIWA Hero" width="400" />
+  <img src="piwa-hero.png" alt="PIWA Hero" width="200" />
 </div>
 
 <h3 align="center">Get up and running with large language models, safely and easily.</h3>
