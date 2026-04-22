@@ -2,7 +2,7 @@
   <img src="piwa-hero.png" alt="PIWA Hero" width="200" />
 </div>
 <br>
-# Oldy
+<h1 align="center">Piwa</h1>
 <h3 align="center">Interact with your machine with a coding agent via Whatsapp </h3>
 
 <p align="center">
