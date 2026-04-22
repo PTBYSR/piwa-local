@@ -23,10 +23,15 @@ Coming soon.
 To start the agent bridge on your machine:
 
 ```bash
-npm start
+piwa
 ```
 
-You'll be guided through a zero-friction pairing process to link your WhatsApp account.
+### CLI Commands
+* `piwa` — Starts the agent bridge and TUI.
+* `piwa status` — Shows current pairing and configuration status.
+* `piwa help` — Shows the help menu.
+
+You'll be guided through a zero-friction pairing process to link your WhatsApp account on your first run.
 
 ## Features
 
